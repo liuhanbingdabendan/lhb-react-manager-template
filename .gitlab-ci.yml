@@ -1,0 +1,16 @@
+# 定义 stages（阶段）。任务将按此顺序执行。
+stages:
+  - deploy-template-name
+
+deploy-template-name:
+  stage: deploy-template-name
+  only:
+    - main
+    - local_test
+  when: manual
+  script:
+    - cd scripts/docker
+    - chmod +x publish.sh
+    - ./publish.sh
+  tags:
+    - nodejs  

@@ -1,0 +1,10 @@
+/lambda/
+/scripts
+/config
+src/utils/*
+.history
+public
+dist
+.umi
+mock
+plugin.ts
